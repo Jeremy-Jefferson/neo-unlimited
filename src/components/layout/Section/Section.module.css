@@ -1,0 +1,28 @@
+.section {
+  padding-top: var(--section-space-md);
+  padding-bottom: var(--section-space-md);
+}
+
+.topDivider {
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.sm {
+  padding-top: var(--section-space-sm);
+  padding-bottom: var(--section-space-sm);
+}
+
+.md {
+  padding-top: var(--section-space-md);
+  padding-bottom: var(--section-space-md);
+}
+
+.lg {
+  padding-top: var(--section-space-lg);
+  padding-bottom: var(--section-space-lg);
+}
+
+.xl {
+  padding-top: var(--section-space-xl);
+  padding-bottom: var(--section-space-xl);
+}
