@@ -29,7 +29,7 @@
 
 .logoImage {
   display: block;
-  height: 36px;
+  height: 38px;
   width: auto;
   object-fit: contain;
 }
@@ -66,5 +66,13 @@
 }
 
 .navLink:hover::after {
+  width: 100%;
+}
+
+.navLinkActive {
+  color: var(--color-text);
+}
+
+.navLinkActive::after {
   width: 100%;
 }

@@ -7,7 +7,7 @@ import styles from './Hero.module.css';
 
 /**
  * Hero section - Primary brand statement
- * Strong, high-impact headline with subtle glow effect
+ * Strong, typography-led composition with subtle glow effect
  */
 export function Hero() {
   return (

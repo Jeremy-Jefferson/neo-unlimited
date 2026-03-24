@@ -1,0 +1,128 @@
+/* Hero Section */
+.heroContent {
+  max-width: 800px;
+}
+
+.headline {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-top: var(--space-4);
+  max-width: 22ch;
+}
+
+.subtext {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  max-width: 52ch;
+  margin-top: var(--space-5);
+}
+
+/* Services List */
+.serviceItem {
+  position: relative;
+}
+
+.serviceHeader {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-5);
+  margin-bottom: var(--space-4);
+}
+
+.serviceNumber {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-brand);
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.serviceTitle {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.serviceDescription {
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  max-width: 52ch;
+  padding-left: calc(var(--space-5) + 48px);
+}
+
+.serviceDivider {
+  margin-top: var(--space-8);
+  opacity: 0.6;
+}
+
+/* Responsive adjustment for service description */
+@media (max-width: 640px) {
+  .serviceHeader {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  
+  .serviceDescription {
+    padding-left: 0;
+  }
+}
+
+/* Approach Section */
+.approachSection {
+  max-width: 640px;
+  padding-top: var(--space-7);
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.approachText {
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  color: var(--color-text-soft);
+}
+
+.approachLink {
+  color: var(--color-brand);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.approachLink:hover {
+  color: var(--color-accent-strong);
+}
+
+/* CTA Section */
+.ctaContent {
+  text-align: center;
+  padding: var(--space-9) 0;
+}
+
+.ctaTitle {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: var(--space-3);
+}
+
+.ctaText {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  max-width: 44ch;
+  text-align: center;
+  margin: 0 auto var(--space-6);
+}
+
+/* Center the CTA button stack */
+.ctaStack {
+  align-items: center;
+}

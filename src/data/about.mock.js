@@ -1,14 +1,13 @@
 /**
  * About page mock data
- * Philosophy, values, origin story, and team information
  * Premium consultancy tone - authoritative, selective, strategic
  */
 
 export const philosophy = {
-  statement: "Strategy precedes design. Every brand deserves clarity before it earns a visual identity.",
+  lead: "Strategy precedes design.",
   lines: [
-    "We believe distinction is earned through clarity, not decoration.",
-    "We partner with leaders who understand that great branding feels inevitable.",
+    "Every brand deserves clarity before it earns a visual identity.",
+    "We partner with leaders who understand that distinction is earned, not designed.",
   ],
 };
 
@@ -47,7 +46,7 @@ export const team = [
   {
     name: "Marcus Chen",
     title: "Founding Partner & Creative Director",
-    bio: "Two decades shaping brand systems for Fortune 500s and ambitious startups.",
+    bio: "20+ years shaping brand systems for Fortune 500s and high-growth companies.",
   },
   {
     name: "Sarah Holloway",
@@ -62,7 +61,7 @@ export const team = [
 ];
 
 export const cta = {
-  headline: "Have a project in mind?",
-  subtext: "Let's build something that performs.",
+  headline: "Let's define what makes your brand impossible to ignore.",
+  subtext: "We'll help you define what actually matters.",
   buttonText: "Start a Conversation",
 };

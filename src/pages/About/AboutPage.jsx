@@ -17,7 +17,7 @@ export function AboutPage() {
       {/* Hero Section */}
       <Section space="xl">
         <Container size="narrow">
-          <Stack gap="space-6">
+          <Stack gap="space-7">
             <div className={styles.heroContent}>
               <Eyebrow>About Us</Eyebrow>
               <h1 className={styles.headline}>
@@ -39,16 +39,18 @@ export function AboutPage() {
           <Stack gap="space-7">
             <Eyebrow>Our Philosophy</Eyebrow>
             <div className={styles.philosophyBlock}>
-              <p className={styles.philosophyLead}>{philosophy.statement}</p>
-              {philosophy.lines.map((line, index) => (
-                <p key={index} className={styles.philosophyLine}>{line}</p>
-              ))}
+              <p className={styles.philosophyLead}>{philosophy.lead}</p>
+              <div className={styles.philosophySecondary}>
+                {philosophy.lines.map((line, index) => (
+                  <p key={index} className={styles.philosophyLine}>{line}</p>
+                ))}
+              </div>
             </div>
           </Stack>
         </Container>
       </Section>
 
-      {/* Positioning Block */}
+      {/* Positioning Block - Signature Statement */}
       <Section space="md">
         <Container size="narrow">
           <div className={styles.positioningBlock}>
@@ -62,7 +64,7 @@ export function AboutPage() {
       {/* Values Section - Numbered Principles */}
       <Section space="lg">
         <Container size="default">
-          <Stack gap="space-7">
+          <Stack gap="space-8">
             <Eyebrow>What We Believe</Eyebrow>
             <div className={styles.valuesList}>
               {values.map((value, index) => (
@@ -81,10 +83,10 @@ export function AboutPage() {
 
       <Divider />
 
-      {/* Origin - Sharper, Shorter */}
+      {/* Origin - Strategic POV */}
       <Section space="lg">
         <Container size="narrow">
-          <Stack gap="space-5">
+          <Stack gap="space-6">
             <Eyebrow>How We Began</Eyebrow>
             <p className={styles.originText}>{origin.story}</p>
           </Stack>
@@ -93,10 +95,10 @@ export function AboutPage() {
 
       <Divider />
 
-      {/* Leadership - Improved Layout */}
+      {/* Leadership Section */}
       <Section space="lg">
         <Container size="default">
-          <Stack gap="space-7">
+          <Stack gap="space-8">
             <Eyebrow>Leadership</Eyebrow>
             <div className={styles.teamList}>
               {team.map((member, index) => (

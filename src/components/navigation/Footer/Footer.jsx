@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Container } from '../../layout/Container/Container';
 import { Stack } from '../../layout/Stack/Stack';
 import styles from './Footer.module.css';
@@ -12,8 +13,14 @@ export function Footer() {
     <footer className={styles.footer}>
       <Container>
         <div className={styles.inner}>
-          <Stack gap="space-4">
-            <div className={styles.brand}>Neo Unlimited</div>
+          <Stack gap="space-5">
+            <Link to="/" className={styles.logo}>
+              <img 
+                src="/images/NEO Seal.svg" 
+                alt="Neo Unlimited" 
+                className={styles.logoImage}
+              />
+            </Link>
             <p className={styles.tagline}>
               Strategic consultancy, design direction, and high-impact digital experiences.
             </p>
