@@ -16,7 +16,7 @@ export function Header() {
         <div className={styles.inner}>
           <Link to="/" className={styles.logo}>
             <img
-              src="/images/NEO Seal.svg"
+              src="/images/NEO UNLTD.svg"
               alt="Neo Unlimited"
               className={styles.logoImage}
             />
