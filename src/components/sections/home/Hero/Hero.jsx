@@ -1,13 +1,13 @@
+import { Link } from 'react-router-dom';
 import { Section } from '../../../layout/Section/Section';
 import { Container } from '../../../layout/Container/Container';
-import { Stack } from '../../../layout/Stack/Stack';
 import { Eyebrow } from '../../../ui/Eyebrow/Eyebrow';
 import { Button } from '../../../ui/Button/Button';
 import styles from './Hero.module.css';
 
 /**
  * Hero section - Primary brand statement
- * Strong, typography-led composition with subtle glow effect
+ * Two-column composition: logo left, text right
  */
 export function Hero() {
   return (
@@ -15,9 +15,19 @@ export function Hero() {
       <Container size="wide">
         <div className={styles.heroWrapper}>
           <div className={styles.heroGlow} aria-hidden="true" />
-          <Stack gap="space-7">
+          <div className={styles.heroLayout}>
+            {/* Left column: Logo */}
+            <Link to="/" className={styles.heroLogo}>
+              <img
+                src="/images/NEO Seal.svg"
+                alt="Neo Unlimited"
+                className={styles.logoImage}
+              />
+            </Link>
+            
+            {/* Right column: Text block */}
             <div className={styles.heroContent}>
-              <Eyebrow>Strategic Consultancy</Eyebrow>
+              <p className={styles.eyebrow}>Strategic Consultancy</p>
               <h1 className={styles.headline}>
                 We help ambitious brands find their edge.
               </h1>
@@ -30,7 +40,7 @@ export function Hero() {
                 <Button>Start a Conversation</Button>
               </div>
             </div>
-          </Stack>
+          </div>
         </div>
       </Container>
     </Section>
