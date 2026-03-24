@@ -6,8 +6,27 @@ import styles from './ServicesPreview.module.css';
 
 /**
  * ServicesPreview section - Overview of services offered
- * Two-column layout: left for heading/intro, right for service list
+ * Two-column layout with interactive service rows
  */
+const services = [
+  {
+    title: 'Brand Strategy',
+    description: 'Positioning, messaging, and market differentiation that sets your brand apart.'
+  },
+  {
+    title: 'Design Direction',
+    description: 'Visual systems that define and scale your brand across every touchpoint.'
+  },
+  {
+    title: 'Digital Experience',
+    description: 'User-centered digital products that engage and convert your audience.'
+  },
+  {
+    title: 'Visual Identity',
+    description: 'Distinctive visual languages that capture your brand essence.'
+  }
+];
+
 export function ServicesPreview() {
   return (
     <Section space="lg">
@@ -25,10 +44,12 @@ export function ServicesPreview() {
           </div>
           <div className={styles.servicesRight}>
             <ul className={styles.serviceList}>
-              <li className={styles.serviceItem}>Brand Strategy</li>
-              <li className={styles.serviceItem}>Design Direction</li>
-              <li className={styles.serviceItem}>Digital Experience</li>
-              <li className={styles.serviceItem}>Visual Identity</li>
+              {services.map((service, index) => (
+                <li key={index} className={styles.serviceItem}>
+                  <span className={styles.serviceTitle}>{service.title}</span>
+                  <span className={styles.serviceDescription}>{service.description}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

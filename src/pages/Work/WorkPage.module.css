@@ -1,0 +1,272 @@
+/* Hero Section */
+.heroContent {
+  max-width: 800px;
+}
+
+.headline {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  max-width: 18ch;
+}
+
+.subtext {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  max-width: 52ch;
+}
+
+/* Category Filter */
+.filterNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+}
+
+.filterButton {
+  background: none;
+  border: none;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-soft);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.filterButton::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--color-brand);
+  transition: width var(--transition-base);
+}
+
+.filterButton:hover {
+  color: var(--color-text);
+}
+
+.filterButton:hover::after {
+  width: 60%;
+}
+
+.filterActive {
+  color: var(--color-text);
+}
+
+.filterActive::after {
+  width: 60%;
+}
+
+/* Project Grid */
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+  .projectGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .projectGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Project Card */
+.projectCard {
+  position: relative;
+}
+
+.cardLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cardImage {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: var(--color-surface-2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.cardImageInner {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.25s ease;
+}
+
+.projectCard:hover .cardImageInner {
+  transform: scale(1.05);
+}
+
+.projectCard:hover .cardImage {
+  filter: brightness(1.05);
+}
+
+/* Gradient backgrounds for project cards */
+.imagePlaceholder {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-surface-2) 100%);
+}
+
+/* Unique gradient for each card based on index */
+.projectCard:nth-child(1) .imagePlaceholder {
+  background: linear-gradient(135deg, #1a1f2e 0%, #0f1219 50%, #1a2332 100%);
+}
+
+.projectCard:nth-child(2) .imagePlaceholder {
+  background: linear-gradient(135deg, #1f1a2e 0%, #120f19 50%, #2a1f32 100%);
+}
+
+.projectCard:nth-child(3) .imagePlaceholder {
+  background: linear-gradient(135deg, #1a2e24 0%, #0f1912 50%, #1a322a 100%);
+}
+
+.projectCard:nth-child(4) .imagePlaceholder {
+  background: linear-gradient(135deg, #2e1a2a 0%, #190f12 50%, #321f2a 100%);
+}
+
+.projectCard:nth-child(5) .imagePlaceholder {
+  background: linear-gradient(135deg, #1e1e2e 0%, #121219 50%, #1e1e32 100%);
+}
+
+.projectCard:nth-child(6) .imagePlaceholder {
+  background: linear-gradient(135deg, #2a2a1e 0%, #191912 50%, #32321e 100%);
+}
+
+.projectCard:nth-child(7) .imagePlaceholder {
+  background: linear-gradient(135deg, #1a2a2e 0%, #0f1919 50%, #1a3232 100%);
+}
+
+.projectCard:nth-child(8) .imagePlaceholder {
+  background: linear-gradient(135deg, #2e2a1a 0%, #191912 50%, #32321a 100%);
+}
+
+.projectCard:nth-child(9) .imagePlaceholder {
+  background: linear-gradient(135deg, #1f2a2e 0%, #121919 50%, #1f3232 100%);
+}
+
+/* Subtle texture overlay */
+.imagePlaceholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(34, 211, 238, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(34, 211, 238, 0.02) 0%, transparent 40%);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.15) 40%,
+    transparent 100%
+  );
+  transition: opacity 0.25s ease;
+}
+
+.projectCard:hover .cardImage {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.projectCard:hover .imageOverlay {
+  opacity: 1;
+}
+
+.cardContent {
+  padding: var(--space-6) var(--space-1);
+}
+
+.cardCategory {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-brand);
+  margin-bottom: var(--space-3);
+  transition: color 0.25s ease;
+}
+
+.projectCard:hover .cardCategory {
+  color: var(--color-accent-strong);
+}
+
+.cardTitle {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+  transition: color 0.25s ease;
+}
+
+.projectCard:hover .cardTitle {
+  color: var(--color-accent-strong);
+}
+
+.cardSummary {
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.25s ease;
+}
+
+.projectCard:hover .cardSummary {
+  color: var(--color-text-soft);
+}
+
+/* CTA Section */
+.ctaContent {
+  text-align: center;
+  padding: var(--space-9) 0;
+}
+
+.ctaTitle {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: var(--space-2);
+}
+
+.ctaText {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  max-width: 50ch;
+  text-align: center;
+  margin: 0 auto var(--space-6);
+}
+
+/* Center the CTA button */
+.ctaContent > div {
+  align-items: center;
+}

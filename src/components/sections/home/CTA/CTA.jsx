@@ -7,7 +7,7 @@ import styles from './CTA.module.css';
 
 /**
  * CTA section - Call to action for engagement
- * Narrow container with increased spacing
+ * Narrow container with conversion-focused copy
  */
 export function CTA() {
   return (
@@ -20,7 +20,7 @@ export function CTA() {
               Ready to build something exceptional?
             </h2>
             <p className={styles.text}>
-              Reach out to discuss how we can help your brand find its edge.
+              Tell us what you're building. We'll help you shape it into something that performs.
             </p>
             <Button>Get in Touch</Button>
           </Stack>

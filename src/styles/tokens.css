@@ -15,6 +15,10 @@
   --color-accent-strong: #e6edf7;
   --color-highlight: #8e9bb8;
 
+  /* Signature Teal Accent */
+  --color-brand: #22d3ee;
+  --color-brand-dim: rgba(34, 211, 238, 0.15);
+
   /* Width Tokens */
   --width-narrow: 720px;
   --width-default: 1120px;
