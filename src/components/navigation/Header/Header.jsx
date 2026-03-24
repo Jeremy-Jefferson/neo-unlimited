@@ -5,7 +5,7 @@ import { navLinks } from '../../../data/nav';
 import styles from './Header.module.css';
 
 /**
- * Site header with logo and navigation
+ * Site header with logo, navigation, and signature
  */
 export function Header() {
   const location = useLocation();
@@ -14,29 +14,32 @@ export function Header() {
     <header className={styles.header}>
       <Container>
         <div className={styles.inner}>
-          <Link to="/" className={styles.logo}>
-            <img
-              src="/images/NEO UNLTD.svg"
-              alt="Neo Unlimited"
-              className={styles.logoImage}
-            />
-          </Link>
-          <nav className={styles.nav}>
-            <Cluster gap="space-5">
-              {navLinks.map((link) => {
-                const isActive = location.pathname === link.href;
-                return (
-                  <Link
-                    key={link.href}
-                    to={link.href}
-                    className={`${styles.navLink} ${isActive ? styles.navLinkActive : ''}`}
-                  >
-                    {link.label}
-                  </Link>
-                );
-              })}
-            </Cluster>
-          </nav>
+          <div className={styles.topRow}>
+            <Link to="/" className={styles.logo}>
+              <img
+                src="/images/NEO UNLTD.svg"
+                alt="Neo Unlimited"
+                className={styles.logoImage}
+              />
+            </Link>
+            <nav className={styles.nav}>
+              <Cluster gap="space-5">
+                {navLinks.map((link) => {
+                  const isActive = location.pathname === link.href;
+                  return (
+                    <Link
+                      key={link.href}
+                      to={link.href}
+                      className={`${styles.navLink} ${isActive ? styles.navLinkActive : ''}`}
+                    >
+                      {link.label}
+                    </Link>
+                  );
+                })}
+              </Cluster>
+            </nav>
+          </div>
+
         </div>
       </Container>
     </header>

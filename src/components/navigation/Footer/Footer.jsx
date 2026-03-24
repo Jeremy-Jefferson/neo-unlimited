@@ -4,7 +4,7 @@ import { Stack } from '../../layout/Stack/Stack';
 import styles from './Footer.module.css';
 
 /**
- * Simple refined footer with brand and copyright
+ * Simple refined footer with brand, signature, and copyright
  */
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -25,8 +25,13 @@ export function Footer() {
               Strategic consultancy, design direction, and high-impact digital experiences.
             </p>
           </Stack>
-          <div className={styles.copyright}>
-            © {currentYear} Neo Unlimited. All rights reserved.
+          <div className={styles.bottomRow}>
+            <div className={styles.copyright}>
+              © {currentYear} Neo Unlimited. All rights reserved.
+            </div>
+            <div className={styles.signature}>
+              Designed & Built by Hungry Ghost DEV
+            </div>
           </div>
         </div>
       </Container>
