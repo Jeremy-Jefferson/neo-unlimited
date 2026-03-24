@@ -29,7 +29,7 @@ export function Hero() {
             <div className={styles.heroContent}>
               <p className={styles.eyebrow}>Strategic Consultancy</p>
               <h1 className={styles.headline}>
-                We help ambitious brands find their edge.
+                We help brands find their edge.
               </h1>
               <p className={styles.subtext}>
                 Neo Unlimited is a premium consultancy for brands that refuse to blend in.
