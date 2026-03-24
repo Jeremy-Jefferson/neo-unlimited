@@ -4,7 +4,7 @@ import { Stack } from '../../components/layout/Stack/Stack';
 import { Eyebrow } from '../../components/ui/Eyebrow/Eyebrow';
 import { Button } from '../../components/ui/Button/Button';
 import { Divider } from '../../components/ui/Divider/Divider';
-import { philosophy, values, origin, team, cta } from '../../data/about.mock';
+import { philosophy, positioning, values, origin, team, cta } from '../../data/about.mock';
 import styles from './AboutPage.module.css';
 
 /**
@@ -24,7 +24,7 @@ export function AboutPage() {
                 A consultancy for brands that refuse to blend in
               </h1>
               <p className={styles.subtext}>
-                We help ambitious companies discover their distinct voice and build visual systems that set them apart.
+                We work with ambitious companies who understand that distinction is earned, not designed.
               </p>
             </div>
           </Stack>
@@ -33,30 +33,45 @@ export function AboutPage() {
 
       <Divider />
 
-      {/* Philosophy / Our Approach */}
+      {/* Philosophy Section - Editorial Layout */}
       <Section space="lg">
         <Container size="narrow">
-          <Stack gap="space-5">
+          <Stack gap="space-7">
             <Eyebrow>Our Philosophy</Eyebrow>
-            <p className={styles.philosophyText}>{philosophy.statement}</p>
+            <div className={styles.philosophyBlock}>
+              <p className={styles.philosophyLead}>{philosophy.statement}</p>
+              {philosophy.lines.map((line, index) => (
+                <p key={index} className={styles.philosophyLine}>{line}</p>
+              ))}
+            </div>
           </Stack>
+        </Container>
+      </Section>
+
+      {/* Positioning Block */}
+      <Section space="md">
+        <Container size="narrow">
+          <div className={styles.positioningBlock}>
+            <p className={styles.positioningText}>{positioning.statement}</p>
+          </div>
         </Container>
       </Section>
 
       <Divider />
 
-      {/* Values Section */}
+      {/* Values Section - Numbered Principles */}
       <Section space="lg">
         <Container size="default">
           <Stack gap="space-7">
-            <div className={styles.valuesHeader}>
-              <Eyebrow>What We Believe</Eyebrow>
-            </div>
-            <div className={styles.valuesGrid}>
+            <Eyebrow>What We Believe</Eyebrow>
+            <div className={styles.valuesList}>
               {values.map((value, index) => (
-                <div key={index} className={styles.valueCard}>
-                  <span className={styles.valueLabel}>{value.label}</span>
-                  <p className={styles.valueDescription}>{value.description}</p>
+                <div key={index} className={styles.valueItem}>
+                  <span className={styles.valueNumber}>{value.number}</span>
+                  <div className={styles.valueContent}>
+                    <span className={styles.valueLabel}>{value.label}</span>
+                    <p className={styles.valueDescription}>{value.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -66,7 +81,7 @@ export function AboutPage() {
 
       <Divider />
 
-      {/* Brief Origin */}
+      {/* Origin - Sharper, Shorter */}
       <Section space="lg">
         <Container size="narrow">
           <Stack gap="space-5">
@@ -78,18 +93,18 @@ export function AboutPage() {
 
       <Divider />
 
-      {/* Leadership / Team */}
+      {/* Leadership - Improved Layout */}
       <Section space="lg">
         <Container size="default">
           <Stack gap="space-7">
-            <div className={styles.teamHeader}>
-              <Eyebrow>Leadership</Eyebrow>
-            </div>
-            <div className={styles.teamGrid}>
+            <Eyebrow>Leadership</Eyebrow>
+            <div className={styles.teamList}>
               {team.map((member, index) => (
-                <div key={index} className={styles.teamCard}>
-                  <span className={styles.teamName}>{member.name}</span>
-                  <span className={styles.teamTitle}>{member.title}</span>
+                <div key={index} className={styles.teamItem}>
+                  <div className={styles.teamHeader}>
+                    <span className={styles.teamName}>{member.name}</span>
+                    <span className={styles.teamTitle}>{member.title}</span>
+                  </div>
                   <p className={styles.teamBio}>{member.bio}</p>
                 </div>
               ))}

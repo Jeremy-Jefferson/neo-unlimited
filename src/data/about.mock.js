@@ -1,55 +1,68 @@
 /**
  * About page mock data
  * Philosophy, values, origin story, and team information
+ * Premium consultancy tone - authoritative, selective, strategic
  */
 
 export const philosophy = {
-  statement: "We believe strategy should precede design. Every brand deserves a clear position before it earns a visual identity. We partner with leaders who understand that distinction is earned through clarity, not decoration.",
+  statement: "Strategy precedes design. Every brand deserves clarity before it earns a visual identity.",
+  lines: [
+    "We believe distinction is earned through clarity, not decoration.",
+    "We partner with leaders who understand that great branding feels inevitable.",
+  ],
+};
+
+export const positioning = {
+  statement: "We don't work with everyone. We work with brands that know what they're fighting for.",
 };
 
 export const values = [
   {
+    number: "01",
     label: "Precision Over Trends",
-    description: "We reject the superficial. Every decision is anchored in strategy, not aesthetics for their own sake.",
+    description: "We reject the superficial. Every decision is anchored in strategy.",
   },
   {
+    number: "02",
     label: "Strategy First",
-    description: "We begin with the hard questions—what do you stand for, who are you for, why does it matter.",
+    description: "We begin with the hard questions—what do you stand for, who are you for.",
   },
   {
+    number: "03",
     label: "Results That Perform",
-    description: "Beauty without purpose is ornament. We build brands designed to perform in market, not just in portfolios.",
+    description: "Beauty without purpose is ornament. We build brands that perform in market.",
   },
   {
+    number: "04",
     label: "Calm Confidence",
     description: "We don't shout. We speak with the quiet conviction of those who know their worth.",
   },
 ];
 
 export const origin = {
-  story: "Neo Unlimited emerged from a simple frustration: too many consultancies confuse noise for expertise. We set out to prove that clarity wins. Founded on the belief that the best branding feels inevitable, we help clients cut through the clutter with precision and purpose.",
+  story: "The branding industry confuses noise with expertise. We prove clarity wins. Neo Unlimited was founded on one principle: the best branding feels inevitable.",
 };
 
 export const team = [
   {
     name: "Marcus Chen",
     title: "Founding Partner & Creative Director",
-    bio: "Two decades shaping brand systems for Fortune 500s and ambitious startups alike. Believes in design that earns its keep.",
+    bio: "Two decades shaping brand systems for Fortune 500s and ambitious startups.",
   },
   {
     name: "Sarah Holloway",
     title: "Strategy Director",
-    bio: "Former brand strategist at McCann and Wolff Olins. Brings rigorous thinking to every positioning challenge.",
+    bio: "Former McCann and Wolff Olins. Brings rigorous thinking to positioning.",
   },
   {
     name: "David Okonkwo",
     title: "Technical Director",
-    bio: "Full-stack creative technologist bridging design intent with engineering reality. Builds experiences that perform.",
+    bio: "Full-stack creative technologist bridging design intent with engineering.",
   },
 ];
 
 export const cta = {
-  headline: "Ready to build something exceptional?",
-  subtext: "Let's discuss how we can help you stand apart.",
-  buttonText: "Get in Touch",
+  headline: "Have a project in mind?",
+  subtext: "Let's build something that performs.",
+  buttonText: "Start a Conversation",
 };
