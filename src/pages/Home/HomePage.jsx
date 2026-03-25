@@ -1,29 +1,32 @@
 import { Hero } from '../../components/sections/home/Hero/Hero';
-import { Positioning } from '../../components/sections/home/Positioning/Positioning';
-import { ServicesPreview } from '../../components/sections/home/ServicesPreview/ServicesPreview';
-import { FeaturedWork } from '../../components/sections/home/FeaturedWork/FeaturedWork';
-import { Approach } from '../../components/sections/home/Approach/Approach';
-import { CTA } from '../../components/sections/home/CTA/CTA';
+import { CoreServices } from '../../components/sections/home/CoreServices/CoreServices';
+import { Protection } from '../../components/sections/home/Protection/Protection';
+import { WealthStrategy } from '../../components/sections/home/WealthStrategy/WealthStrategy';
+import { BusinessPartnerships } from '../../components/sections/home/BusinessPartnerships/BusinessPartnerships';
+import { AboutTrust } from '../../components/sections/home/AboutTrust/AboutTrust';
+import { LeadCapture } from '../../components/sections/home/LeadCapture/LeadCapture';
 import { Divider } from '../../components/ui/Divider/Divider';
 
 /**
- * HomePage - Composes all home sections in order
- * Clean composition layer with no inline content
+ * HomePage - Conversion-focused homepage composition
+ * Leads with hero CTA and guides visitors through conversion funnel
  */
 export function HomePage() {
   return (
     <main>
       <Hero />
       <Divider />
-      <Positioning />
+      <CoreServices />
       <Divider />
-      <ServicesPreview />
+      <Protection />
       <Divider />
-      <FeaturedWork />
+      <WealthStrategy />
       <Divider />
-      <Approach />
+      <BusinessPartnerships />
       <Divider />
-      <CTA />
+      <AboutTrust />
+      <Divider />
+      <LeadCapture />
     </main>
   );
 }

@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
 import { Section } from '../../../layout/Section/Section';
 import { Container } from '../../../layout/Container/Container';
-import { Eyebrow } from '../../../ui/Eyebrow/Eyebrow';
+import { Stack } from '../../../layout/Stack/Stack';
 import { Button } from '../../../ui/Button/Button';
 import styles from './Hero.module.css';
 
 /**
- * Hero section - Primary brand statement
- * Two-column composition: logo left, text right
+ * Hero section - Primary brand statement with conversion focus
+ * Two-column composition: logo left, text right with clear CTA
  */
 export function Hero() {
   return (
@@ -27,18 +27,21 @@ export function Hero() {
             
             {/* Right column: Text block */}
             <div className={styles.heroContent}>
-              <p className={styles.eyebrow}>Strategic Consultancy</p>
+              <p className={styles.eyebrow}>Strategic Financial Consulting</p>
               <h1 className={styles.headline}>
-                We help brands find their edge.
+                Build Income. Protect Your Family. Create Generational Wealth.
               </h1>
               <p className={styles.subtext}>
-                Neo Unlimited is a premium consultancy for brands that refuse to blend in.
-                We craft distinctive digital experiences and strategic direction for
-                forward-thinking organizations.
+                NEO Unlimited helps individuals and families protect what they're building, 
+                structure their finances, and create long-term strategies for growth.
               </p>
-              <div className={styles.ctaGroup}>
-                <Button>Start a Conversation</Button>
-              </div>
+              <Stack gap="space-4" className={styles.ctaGroup}>
+                <div className={styles.primaryCta}>
+                  <Button>Claim Your Game Plan</Button>
+                  <p className={styles.ctaSupport}>Free financial strategy session. No pressure.</p>
+                </div>
+                <Button variant="secondary">Learn More</Button>
+              </Stack>
             </div>
           </div>
         </div>

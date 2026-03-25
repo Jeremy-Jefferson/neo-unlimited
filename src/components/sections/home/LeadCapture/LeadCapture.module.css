@@ -1,0 +1,119 @@
+.wrapper {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: clamp(32px, 6vw, 64px);
+}
+
+.header {
+  text-align: center;
+}
+
+.title {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: var(--tracking-tight);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: var(--text-base);
+  color: var(--color-text-soft);
+  margin-top: var(--space-2, 8px);
+}
+
+.form {
+  margin-top: var(--space-6, 32px);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2, 8px);
+  flex: 1;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4, 16px);
+}
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.optional {
+  font-weight: 400;
+  color: var(--color-text-soft);
+}
+
+.input,
+.textarea {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3, 12px) var(--space-4, 16px);
+  transition: border-color var(--transition-base);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--color-text-soft);
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-brand);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submitButton {
+  width: 100%;
+  margin-top: var(--space-4, 16px);
+}
+
+.disclaimer {
+  font-size: var(--text-sm);
+  color: var(--color-text-soft);
+  text-align: center;
+  margin-top: var(--space-4, 16px);
+  margin-bottom: 0;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .wrapper {
+    padding: var(--space-5, 24px);
+  }
+
+  .header {
+    text-align: left;
+  }
+
+  .title {
+    font-size: var(--text-xl);
+  }
+
+  .disclaimer {
+    text-align: left;
+  }
+}

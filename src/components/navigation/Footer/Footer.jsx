@@ -4,7 +4,7 @@ import { Stack } from '../../layout/Stack/Stack';
 import styles from './Footer.module.css';
 
 /**
- * Simple refined footer with brand, signature, and copyright
+ * Footer with brand, compliance text, and copyright
  */
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -22,7 +22,12 @@ export function Footer() {
               />
             </Link>
             <p className={styles.tagline}>
-              Strategic consultancy, design direction, and high-impact digital experiences.
+              Strategic financial consulting for individuals and families.
+            </p>
+            <p className={styles.compliance}>
+              Franklin Jefferson is a licensed life insurance agent in the state of Texas. 
+              Insurance products are offered through properly appointed carriers. 
+              NEO Unlimited LLC is not an insurance company.
             </p>
           </Stack>
           <div className={styles.bottomRow}>
