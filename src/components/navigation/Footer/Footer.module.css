@@ -46,6 +46,11 @@
   color: var(--color-text-soft);
   opacity: 0.6;
   letter-spacing: 0.02em;
+  transition: color var(--transition-fast);
+}
+
+.copyright:hover {
+  color: white;
 }
 
 .signature {
@@ -54,6 +59,15 @@
   letter-spacing: 0.05em;
   color: var(--color-text-soft);
   opacity: 0.65;
+}
+
+.signature a {
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.signature a:hover {
+  color: white;
 }
 
 /* Mobile: stack vertically */
