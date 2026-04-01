@@ -30,7 +30,7 @@ export function Footer() {
               © {currentYear} Neo Unlimited. All rights reserved.
             </div>
             <div className={styles.signature}>
-              Designed & Built by Hungry Ghost DEV
+              <a href="https://www.hungryghost.dev/" target="_blank" rel="noopener noreferrer">Designed & Built by Hungry Ghost DEV</a>
             </div>
           </div>
         </div>
